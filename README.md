@@ -7,17 +7,25 @@ CodeSnippets路径：~/Library/Developer/Xcode/UserData/CodeSnippets
 模板路径：~/Library/Developer/Xcode/Templates/
 
 #使用方式
+
 Xcode 的 Code Snippets 文件存放于 ~/Library/Developer/Xcode/UserData/CodeSnippets 目录，只要直接把 codesnippets 文件放到这个目录下（若没有则自己创建），重启 Xcode 即可生效。
+
 Xcode 的 自定义模板 文件存放于 ~/Library/Developer/Xcode/Templates 目录，只要直接把 Templates 文件放到这个目录下（若没有则自己创建 即可生效。
 
 #快捷键
+
 aa1 - 注释 竖
+
 aa2 - 注释 横
+
 aa3 - 注释 三斜杠
+
 action_view - action - View 初始化
+
 action_viewControl - action -ViewControl 初始化
 
 ees - 强引用
+
 eew - 弱引用
 
 
