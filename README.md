@@ -14,4 +14,5 @@ Xcode 的 自定义模板 文件存放于 ~/Library/Developer/Xcode/Templates �
 
 #快捷键
 
-CodeSnippets说明
+[CodeSnippets说明](https://github.com/ZebZheng/BoyFriend_CT/blob/main/CodeSnippets%E8%AF%B4%E6%98%8E)
+
