@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>GCD-group</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>   //开启子线程,异步执行多任务
+    dispatch_group_t group = dispatch_group_create();
+    // 并行执行的线程一
+    dispatch_group_enter(group);
+    &lt;#以下放在代码里面#&gt;
+        dispatch_group_leave(group);
+    // 并行执行的线程二
+    dispatch_group_enter(group);
+    &lt;#以下放在代码里面#&gt;
+     dispatch_group_leave(group);
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+
+    });</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D950D125-ED98-4B58-BD28-A24EE92689FB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>GCD-group</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>groupGCD 多任务 -能异步</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

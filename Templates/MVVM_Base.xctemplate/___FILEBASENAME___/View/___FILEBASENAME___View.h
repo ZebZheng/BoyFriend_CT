@@ -1,0 +1,13 @@
+//___FILEHEADER___
+
+#import "BaseView.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface ___FILEBASENAMEASIDENTIFIER___ : BaseView
+
+
+
+@end
+
+NS_ASSUME_NONNULL_END

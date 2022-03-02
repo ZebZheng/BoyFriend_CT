@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>action_viewControl</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - Lifecycle
+-(instancetype)init{
+    if (self=[super init]) {
+        
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self initializeView];
+    [self initializeViewData];
+    [self bindControlEvent];
+    
+}
+
+#pragma mark - init
+/**** 视图初始化 ****/
+-(void)initializeView{
+    
+}
+/**** 数据初始化 ****/
+-(void)initializeViewData{
+    
+}
+/**** 事件绑定 ****/
+-(void)bindControlEvent{
+    
+}
+
+#pragma mark - function
+
+
+#pragma mark - logical processing（逻辑处理）
+
+
+#pragma mark - Data
+
+
+#pragma mark - Event Response / IBActions
+
+
+#pragma mark - Protocol / delegat
+
+
+#pragma mark - Notification
+
+
+#pragma mark - Setter
+
+
+#pragma mark - Getter
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B4424A6B-75DB-4F38-ACDB-318EDAB88765</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>action -ViewControl 初始化</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
