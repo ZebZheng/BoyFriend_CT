@@ -18,7 +18,9 @@
     
 }
 
-- (void)bf_setupWithData:(id)datd {
+- (void)bf_setupWithData:(id)data {
+    ___VARIABLE_productName___InfoModel  * infoModel = data;
+    
     
 }
 

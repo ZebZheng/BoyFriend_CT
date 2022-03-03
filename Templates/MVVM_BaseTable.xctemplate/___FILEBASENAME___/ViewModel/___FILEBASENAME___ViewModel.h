@@ -2,6 +2,8 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseTableViewModel.h"
+#import "___VARIABLE_productName___ListModel.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
