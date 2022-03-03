@@ -13,7 +13,7 @@
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 #pragma mark - Lifecycle
--(instancetype)init{
+-(instancetype)init {
     if (self=[super init]) {
         
     }
@@ -30,15 +30,17 @@
 
 #pragma mark - init
 /**** 视图初始化 ****/
--(void)initializeView{
+-(void)initializeView {
     
 }
+
 /**** 数据初始化 ****/
--(void)initializeViewData{
+-(void)initializeViewData {
     
 }
+
 /**** 事件绑定 ****/
--(void)bindControlEvent{
+-(void)bindControlEvent {
     
 }
 
