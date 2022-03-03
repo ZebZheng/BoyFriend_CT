@@ -145,10 +145,6 @@
 			</dict>
 			<key>AllowedTypes</key>
 			<dict>
-				<key>Swift</key>
-				<array>
-					<string>public.swift-source</string>
-				</array>
 				<key>Objective-C</key>
 				<array>
 					<string>public.objective-c-source</string>
