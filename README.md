@@ -6,7 +6,7 @@ CodeSnippets路径：~/Library/Developer/Xcode/UserData/CodeSnippets
 
 模板路径：~/Library/Developer/Xcode/Templates/
 
-#模板相关宏
+#模板相关宏意义
 
 宏名 | 意义 |
 ------------ | ------------- | ------------
