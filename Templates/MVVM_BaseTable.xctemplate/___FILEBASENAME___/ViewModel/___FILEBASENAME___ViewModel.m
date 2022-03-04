@@ -15,17 +15,16 @@
 //MARK: - 下拉
 -(void)refreshData{
     @weakify(self);
-    [self asyncGet<#name#>ListWithPage:1 successBlock:^(BaseResponseData *result) {
+    [self asyncGetListWithPage:1 successBlock:^(BaseResponseData *result) {
         @strongify(self);
+        [self.dataSource removeAllObjects];
         if (self.isNeedPaging == NO) {
             NSArray * arrModel = result.extendModel;
-            [self.dataSource removeAllObjects];
             [self.dataSource addObject:arrModel];
             self.reloadTableView = YES;
             [self dataSetWithPageNow:1 Count:1];
         } else {
             ___VARIABLE_productName___ListModel * listModel = result.extendModel;
-            [self.dataSource removeAllObjects];
             [self.dataSource addObject:listModel.records];
             self.reloadTableView = YES;
             [self dataSetWithPageNow:listModel.current Count:listModel.pages];
@@ -56,7 +55,7 @@
         return;
     }
     @weakify(self);
-    [self asyncGet<#name#>ListWithPage:self.pageNow + 1 successBlock:^(BaseResponseData *result) {
+    [self asyncGetListWithPage:self.pageNow + 1 successBlock:^(BaseResponseData *result) {
         @strongify(self);
         ___VARIABLE_productName___ListModel * listModel = result.extendModel;
         if (self.dataSource.count>0) {
@@ -79,7 +78,7 @@
 /**
  *  获取列表数据
  */
-- (void)asyncGet<#name#>ListWithPage:(NSInteger)page successBlock:(successCallback)successBlock failureBlock:(failCallback)failureBlock {
+- (void)asyncGetListWithPage:(NSInteger)page successBlock:(successCallback)successBlock failureBlock:(failCallback)failureBlock {
     NSMutableDictionary * mDic = [NSMutableDictionary new];
     Class class = nil;
     if (self.isNeedPaging) {

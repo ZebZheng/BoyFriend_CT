@@ -20,9 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ___VARIABLE_productName___InfoModel : BaseModel
 
-/// <#注释#>
-@property(nonatomic, copy) <#type#> *<#name#>;
-
 @end
 
 

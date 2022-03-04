@@ -15,10 +15,11 @@
 #pragma mark - Lifecycle
 -(instancetype)init {
     if (self=[super init]) {
+        // 如果需要分页  建议 同步开启 上提  下拉 刷新
+        self.isNeedPaging = <#NO#>;
 //        self.isUseRefreshHeader = YES;
 //        self.isUseRefreshFooter = YES;
 //        self.isAutoRequestMore = YES;
-//        self.isNeedPaging = NO;
     }
     return self;
 }
@@ -39,8 +40,7 @@
 
 /**** 数据初始化 ****/
 -(void)initializeViewData {
-    self.tableViewModel = self.productViewModel;
-    [self bindControlEventViewModel:self.tableViewModel];
+    [self bindControlEventViewModel:self.productViewModel];
     [self refreshHeaderAction];
 }
 
