@@ -9,7 +9,7 @@
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
 #pragma mark - Lifecycle
--(instancetype)init {
+-(instancetype)init{
     if (self=[super init]) {
         
     }

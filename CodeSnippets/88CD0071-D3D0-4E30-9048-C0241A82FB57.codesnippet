@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>puploadrequest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/**
+ * &lt;#注释#&gt;
+ */
+- (void)asyncUpload&lt;#name#&gt;WithFiles:(NSArray *)files fileNames:(NSArray *)fileNames requestModel:(&lt;#BaseModel#&gt; *)requestModel progressBlock:(void (^)(NSProgress *progress))progressBlock successBlock:(successCallback)successBlock failureBlock:(failCallback)failureBlock {
+    NSMutableDictionary * mDic = [NSMutableDictionary new];
+    if (requestModel != nil) {
+        mDic = requestModel.mj_keyValues;
+    }
+    [[NetWorkHelper sharedInstance]uploadFileWithUriString:&lt;#uri#&gt; files:files fileName:fileNames parameters:mDic progressBlock:^(NSProgress *progress) {
+        BFBlock_Safe_Calls(progressBlock,progress);
+    } successBlock:^(id responseObject) {
+        [self handleResponse:responseObject resp:nil completion:^(BOOL success, BaseResponseData *respData) {
+            if (success) {
+                BFBlock_Safe_Calls(successBlock, respData);
+            } else {
+                BFBlock_Safe_Calls(failureBlock, respData);
+            }
+        }];
+    } failureBlock:^(BaseResponseData *error) {
+        BFBlock_Safe_Calls(failureBlock, error);
+    }];
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>88CD0071-D3D0-4E30-9048-C0241A82FB57</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>upload 上传请求</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

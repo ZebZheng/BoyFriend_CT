@@ -3,13 +3,14 @@ CodeSnippets路径：~/Library/Developer/Xcode/UserData/CodeSnippets
 模板路径：~/Library/Developer/Xcode/Templates/
 
 
-pr  get  post 请求
 
 aa1 - 注释 竖
 aa2 - 注释 横
 aa3 - 注释 三斜杠
 action_view - action - View 初始化
 action_viewControl - action -ViewControl 初始化
+kinit - 控件 alloc init
+
 
 ees - 强引用
 eew - 弱引用
@@ -43,6 +44,13 @@ paddChildViewController 添加子控制器
 premoveFromParentViewController - 从父控制器上移除
 ptap - 单击手势
 paddtarget - UIControl Add Target
+
+pgetrequest - Get请求
+ppostrequest - Post请求
+pputrequest - Put请求
+pdeleterequest - Delete 请求
+puploadrequest - Upload 上传请求
+
 
 
 pprotocal - 定义 代理方法
@@ -102,6 +110,7 @@ ggetHeight 	- CGRectGetHeight
 ggetMinX 		- CGRectGetMinX
 ggetMinY	  - CGRectGetMinY
 ggetWidth 	- CGRectGetWidth
+ssinit     - 控件初始化
 ssetFrame   - set Frame
 ssButtonImage - set UIButton Image
 ssButtonTitle - set UIButton Title

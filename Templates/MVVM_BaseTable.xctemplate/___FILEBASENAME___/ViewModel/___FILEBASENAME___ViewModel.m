@@ -15,20 +15,28 @@
 //MARK: - 下拉
 -(void)refreshData{
     @weakify(self);
-    [self asyncGet<#name#>ListWithPage:1 Success:^(BaseResponseData *result) {
+    [self asyncGet<#name#>ListWithPage:1 successBlock:^(BaseResponseData *result) {
         @strongify(self);
-        ___VARIABLE_productName___ListModel * listModel = result.extendModel;
-        [self.dataSource removeAllObjects];
-        [self.dataSource addObject:listModel.records];
-        self.reloadTableView = YES;
-        [self dataSetWithPageNow:listModel.current Count:listModel.pages];
+        if (self.isNeedPaging == NO) {
+            NSArray * arrModel = result.extendModel;
+            [self.dataSource removeAllObjects];
+            [self.dataSource addObject:arrModel];
+            self.reloadTableView = YES;
+            [self dataSetWithPageNow:1 Count:1];
+        } else {
+            ___VARIABLE_productName___ListModel * listModel = result.extendModel;
+            [self.dataSource removeAllObjects];
+            [self.dataSource addObject:listModel.records];
+            self.reloadTableView = YES;
+            [self dataSetWithPageNow:listModel.current Count:listModel.pages];
+        }
         if (self.dataSource.count==0) {
             BFBlock_Safe_Calls(self.placeholderBlock,YES,BFPlaceholderViewTypeNoList,NO);
         }else{
             BFBlock_Safe_Calls(self.placeholderBlock,NO,BFPlaceholderViewTypeNoList,NO);
         }
         
-    } Failure:^(BaseResponseData *result) {
+    } failureBlock:^(BaseResponseData *result) {
         @strongify(self);
         self.endRefreshing = YES;
         [self showMessageInView:result.info];
@@ -48,7 +56,7 @@
         return;
     }
     @weakify(self);
-    [self asyncGet<#name#>ListWithPage:self.pageNow + 1 Success:^(BaseResponseData *result) {
+    [self asyncGet<#name#>ListWithPage:self.pageNow + 1 successBlock:^(BaseResponseData *result) {
         @strongify(self);
         ___VARIABLE_productName___ListModel * listModel = result.extendModel;
         if (self.dataSource.count>0) {
@@ -61,7 +69,7 @@
         self.reloadTableView = YES;
         [self dataSetWithPageNow:listModel.current Count:listModel.pages];
         
-    } Failure:^(BaseResponseData *result) {
+    } failureBlock:^(BaseResponseData *result) {
         @strongify(self);
         self.endRefreshing = YES;
         [self showMessageInView:result.info];
@@ -70,24 +78,28 @@
 
 /**
  *  获取列表数据
- *
  */
-- (void)asyncGet<#name#>ListWithPage:(NSInteger)page
-                     Success:(successCallback)successBlock
-                     Failure:(failCallback)failureBlock {
+- (void)asyncGet<#name#>ListWithPage:(NSInteger)page successBlock:(successCallback)successBlock failureBlock:(failCallback)failureBlock {
     NSMutableDictionary * mDic = [NSMutableDictionary new];
-    [mDic setValue:[NSString stringWithFormat:@"%zd",page] forKey:@"page"];
-    [mDic setValue:BFApi_ListPageSize forKey:@"rows"];
+    Class class = nil;
+    if (self.isNeedPaging) {
+        [mDic setValue:[NSString stringWithFormat:@"%zd",page] forKey:@"page"];
+        [mDic setValue:BFApi_ListPageSize forKey:@"rows"];
+        class = [___VARIABLE_productName___ListModel class];
+    }else{
+        class = [___VARIABLE_productName___InfoModel class];
+    }
 
-    [[NetWorkHelper sharedInstance] getWithUriString:<#url#> Parameters:mDic  Success:^(id responseObject) {
-        [self handleResponse:responseObject Resp:[___VARIABLE_productName___ListModel class] completion:^(BOOL success, BaseResponseData *respData) {
+
+    [[NetWorkHelper sharedInstance] getWithUriString:<#uri#> parameters:mDic  successBlock:^(id responseObject) {
+        [self handleResponse:responseObject resp:class completion:^(BOOL success, BaseResponseData *respData) {
             if (success) {
                 BFBlock_Safe_Calls(successBlock, respData);
             } else {
                 BFBlock_Safe_Calls(failureBlock, respData);
             }
         }];
-    } Failure:^(BaseResponseData *error) {
+    } failureBlock:^(BaseResponseData *error) {
         BFBlock_Safe_Calls(failureBlock, error);
     }];
 }

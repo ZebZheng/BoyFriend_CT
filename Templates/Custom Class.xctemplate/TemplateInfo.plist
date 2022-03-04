@@ -51,6 +51,7 @@
 			<string>#import &lt;UIKit/UIKit.h&gt;</string>
 			<key>Values</key>
 			<array>
+				<string>BaseListModel</string>
 				<string>NSObject</string>
 				<string>UIView</string>
 				<string>BaseView</string>
