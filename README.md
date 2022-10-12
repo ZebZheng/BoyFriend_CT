@@ -9,7 +9,7 @@ CodeSnippets路径：~/Library/Developer/Xcode/UserData/CodeSnippets
 #模板相关宏意义
 
 宏名 | 意义 |
------------- | ------------- | ------------
+
 ___FILENAME___ | 文件名包括后缀
 
 ___PROJECTNAME___ | 工程名

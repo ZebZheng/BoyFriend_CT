@@ -1,13 +1,9 @@
 //___FILEHEADER___
 
 #import "___FILEBASENAME___.h"
-#import "___VARIABLE_productName___View.h"
-#import "___VARIABLE_productName___ViewModel.h"
 
 @interface ___FILEBASENAMEASIDENTIFIER___ ()
 
-@property (nonatomic,strong) ___VARIABLE_productName___View * productView;
-@property (nonatomic,strong) ___VARIABLE_productName___ViewModel * productViewModel;
 
 @end
 
@@ -66,18 +62,7 @@
 
 
 #pragma mark - Getter
-- (___VARIABLE_productName___View *)productView {
-    if (!_productView) {
-        _productView = [___VARIABLE_productName___View.alloc init];
-    }
-    return _productView;
-}
-- (___VARIABLE_productName___ViewModel *)productViewModel {
-    if (!_productViewModel) {
-        _productViewModel = [___VARIABLE_productName___ViewModel.alloc init];
-    }
-    return _productViewModel;
-}
+
 
 
 
