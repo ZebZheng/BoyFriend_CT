@@ -9,8 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#button#&gt;
-@property (nonatomic,strong) UIButton *&lt;#button#&gt;;</string>
+	<string>@property (nonatomic,strong) UIButton *&lt;#button#&gt;;/// &lt;#button#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4A8E54C6-7C61-4283-9E9A-AD72D9B662E6</string>
 	<key>IDECodeSnippetLanguage</key>

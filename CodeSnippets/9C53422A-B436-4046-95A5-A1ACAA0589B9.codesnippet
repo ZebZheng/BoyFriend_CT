@@ -11,7 +11,10 @@
 	<key>IDECodeSnippetContents</key>
 	<string>-(UILabel *)&lt;#label#&gt;{
     if (!_&lt;#label#&gt;) {
-        _&lt;#label#&gt;=[BFUICreator createLabelWithText:&lt;#(NSString *)#&gt; color:&lt;#(UIColor *)#&gt; font:&lt;#(UIFont *)#&gt;];
+        UILabel * label = [[UILabel alloc]init];
+        label.textColor = &lt;#(UIColor *)#&gt;;
+        label.font = &lt;#(UIFont *)#&gt;;
+        _&lt;#label#&gt;= label;
     }
     return _&lt;#label#&gt;;
 }</string>

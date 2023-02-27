@@ -3,22 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>psr</string>
+	<string>par</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#注释#&gt;
-@property(nonatomic, strong, readonly) &lt;#type#&gt; *&lt;#name#&gt;;</string>
+	<string>@property(nonatomic, assign, readonly) &lt;#type#&gt; &lt;#name#&gt;;/// &lt;#注释#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7673BB72-6355-4D45-B6D7-E36B4A79C835</string>
+	<string>32E2254E-F2F6-419B-B581-B6885C95A62B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong 只读属性</string>
+	<string>assign 只读属性</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

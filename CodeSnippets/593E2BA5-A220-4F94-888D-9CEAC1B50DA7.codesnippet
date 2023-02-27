@@ -11,7 +11,9 @@
 	<key>IDECodeSnippetContents</key>
 	<string>-(UIImageView *)&lt;#imageView#&gt;{
     if (!_&lt;#imageView#&gt;) {
-        _&lt;#imageView#&gt;=[BFUICreator createImageViewWithName:@"&lt;#name#&gt;"];
+        UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.image = &lt;#UIImage#&gt;;
+        _&lt;#imageView#&gt;= imageView;
     }
     return _&lt;#imageView#&gt;;
 }</string>

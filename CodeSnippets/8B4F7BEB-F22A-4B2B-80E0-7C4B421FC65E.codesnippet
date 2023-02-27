@@ -9,8 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#注释#&gt;
-@property (nonatomic,weak) id&lt;&lt;#protocol#&gt;&gt; &lt;#delegate#&gt;; 
+	<string>@property (nonatomic,weak) id&lt;&lt;#protocol#&gt;&gt; &lt;#delegate#&gt;; /// &lt;#注释#&gt;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>8B4F7BEB-F22A-4B2B-80E0-7C4B421FC65E</string>

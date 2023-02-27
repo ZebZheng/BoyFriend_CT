@@ -11,7 +11,10 @@
 	<key>IDECodeSnippetContents</key>
 	<string>-(UIButton *)&lt;#button#&gt;{
     if (!_&lt;#button#&gt;) {
-        _&lt;#button#&gt;=[BFUICreator createButtonWithNormalImage:@"&lt;#name#&gt;" target:&lt;#(id)#&gt; action:&lt;#(SEL)#&gt;];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setImage:&lt;#UIImage#&gt; forState:UIControlStateNormal];
+        [button addTarget:&lt;#(id)#&gt; action:&lt;#(SEL)#&gt; forControlEvents:UIControlEventTouchUpInside];
+        _&lt;#button#&gt;= button;
     }
     return _&lt;#button#&gt;;
 }</string>

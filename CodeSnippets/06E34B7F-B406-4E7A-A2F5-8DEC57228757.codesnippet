@@ -9,8 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#view#&gt;
-@property (nonatomic,strong) UIView *&lt;#viewName#&gt;;</string>
+	<string>@property (nonatomic,strong) UIView *&lt;#viewName#&gt;;/// &lt;#view#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>06E34B7F-B406-4E7A-A2F5-8DEC57228757</string>
 	<key>IDECodeSnippetLanguage</key>

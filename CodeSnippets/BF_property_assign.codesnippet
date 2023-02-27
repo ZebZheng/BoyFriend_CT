@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>pcr</string>
+	<string>pa</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>ClassInterfaceVariables</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#注释#&gt;
-@property(nonatomic, copy, readonly) &lt;#type#&gt; *&lt;#name#&gt;;</string>
+	<string>@property(nonatomic, assign) &lt;#type#&gt; &lt;#name#&gt;;/// &lt;#注释#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>BE7A7A16-BA79-45AF-A62B-869A12C1E257</string>
+	<string>9F96E543-5450-452B-9CA8-8BCCD8D841ED</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Copy 只读属性</string>
+	<string>assign 属性</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

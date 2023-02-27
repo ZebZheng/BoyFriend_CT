@@ -3,21 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>plabel</string>
+	<string>tms_txwh</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic,strong) UILabel *&lt;#label#&gt;;/// &lt;#label#&gt;</string>
+	<string> [&lt;#view#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(&lt;#value#&gt;);
+        make.centerX.mas_equalTo(&lt;#value#&gt;);
+        make.width.mas_equalTo(&lt;#value#&gt;);
+        make.height.mas_equalTo(&lt;#value#&gt;);
+    }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7F4C0DA2-F3F9-4A97-B830-5A75CA07BB34</string>
+	<string>ABEBD37D-BED5-4ACA-A2E9-6722A40E047C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UILabel 属性</string>
+	<string>MS top centerX width height</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

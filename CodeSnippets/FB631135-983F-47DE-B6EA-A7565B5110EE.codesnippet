@@ -11,7 +11,9 @@
 	<key>IDECodeSnippetContents</key>
 	<string>-(UIView *)&lt;#view#&gt;{
     if (!_&lt;#view#&gt;) {
-        _&lt;#view#&gt;=[BFUICreator createViewWithBgColor:&lt;#color#&gt; radius:0];
+        UIView *view = [[UIView alloc] init];
+        view.backgroundColor = &lt;#color#&gt;;
+        _&lt;#view#&gt;= view;
     }
     return _&lt;#view#&gt;;
 }</string>
